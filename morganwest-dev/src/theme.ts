@@ -11,7 +11,7 @@ const theme = createTheme({
     secondary: {
       main: '#9C27B0', // Purple
       light: '#D500F9', // Lighter purple
-      dark: '#7B1FA2', // Darker purple
+      dark: '#7B1FA2', // Darker purple 
       contrastText: '#fff', // White text for contrast
     },
     background: {
