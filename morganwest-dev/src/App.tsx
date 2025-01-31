@@ -1,11 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 import Header from './components/Header';
 import About from './components/About';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
+import LandingPage from './components/LandingPage';
+import CareerPage from './components/CareerPage';
 
 const theme = createTheme({
   palette: {
@@ -22,7 +24,6 @@ const theme = createTheme({
   },
 });
 
-
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
@@ -30,17 +31,16 @@ const App: React.FC = () => {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<LandingPage />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/career" element={<CareerPage />} />
         </Routes>
       </Router>
     </ThemeProvider>
   );
 }
-
-const Home: React.FC = () => <h1>Welcome to my portfolio</h1>;
 
 export default App;
