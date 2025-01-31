@@ -112,7 +112,6 @@ const CareerPage: React.FC = () => {
                     <Chip 
                       key={i} 
                       label={tech} 
-                      variant="outlined" 
                       size="small" 
                     />
                   ))}

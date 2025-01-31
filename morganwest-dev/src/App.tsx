@@ -8,21 +8,7 @@ import Skills from './components/Skills';
 import Contact from './components/Contact';
 import LandingPage from './components/LandingPage';
 import CareerPage from './components/CareerPage';
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#E91E63', // Pink
-    },
-    secondary: {
-      main: '#9C27B0', // Purple
-    },
-    background: {
-      default: '#FCE4EC', // Light pink background
-      paper: '#F8BBD0',  // Softer pink for paper elements
-    },
-  },
-});
+import theme from "./theme";
 
 const App: React.FC = () => {
   return (
