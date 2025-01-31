@@ -111,7 +111,7 @@ const CareerPage: React.FC = () => {
                   {exp.technologies.map((tech, i) => (
                     <Chip 
                       key={i} 
-                      label={tech} 
+                      label={tech}  
                       size="small" 
                     />
                   ))}
