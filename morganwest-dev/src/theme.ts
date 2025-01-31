@@ -12,7 +12,7 @@ const theme = createTheme({
       main: '#9C27B0', // Purple
       light: '#D500F9', // Lighter purple
       dark: '#7B1FA2', // Darker purple 
-      contrastText: '#fff', // White text for contrast
+      contrastText: '#fff', // White text for contrast 
     },
     background: {
       default: '#FCE4EC', // Soft pink background
