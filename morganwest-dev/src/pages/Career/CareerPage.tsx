@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import TerminalWindow from '../Terminal/TerminalWindow/TerminalWindow';
-import ExperienceContent from '../Terminal/ExperienceContent/ExperienceContent';
+import TerminalWindow from './TerminalWindow/TerminalWindow';
+import ExperienceContent from './ExperienceContent/ExperienceContent';
 
 const CareerPage: React.FC = () => {
   const navigate = useNavigate();

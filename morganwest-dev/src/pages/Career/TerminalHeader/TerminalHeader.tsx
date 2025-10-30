@@ -21,10 +21,10 @@ const TerminalHeader: React.FC<TerminalHeaderProps> = ({ onNavigate }) => {
         <button className={styles.navButton} onClick={() => onNavigate('home')}>
           Home
         </button>
-        {/* <button className={styles.navButton} onClick={() => onNavigate('projects')}>
+        <button className={styles.navButton} onClick={() => onNavigate('projects')}>
           Projects
         </button>
-        <button className={styles.navButton} onClick={() => onNavigate('contact')}>
+        {/* <button className={styles.navButton} onClick={() => onNavigate('contact')}>
           Contact
         </button> */}
       </nav>

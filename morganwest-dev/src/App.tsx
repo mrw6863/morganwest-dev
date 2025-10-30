@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CssBaseline, ThemeProvider } from '@mui/material';
-import About from './pages/About';
+import About from './pages/About/About';
 import Projects from './pages/Projects';
 import Skills from './pages/Skills';
 import Contact from './pages/Contact';
 import LandingPage from './pages/LandingPage/LandingPage';
-import CareerPage from './pages/Terminal/CareerPage';
+import CareerPage from './pages/Career/CareerPage';
 import { lightTheme, darkTheme } from './theme';
 
 const App: React.FC = () => {
