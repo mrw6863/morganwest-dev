@@ -95,6 +95,13 @@ const darkTheme = createTheme({
         },
       },
     },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          borderRadius: 50
+        }
+      }
+    }
   },
 });
 

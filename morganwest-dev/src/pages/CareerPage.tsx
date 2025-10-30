@@ -1,13 +1,6 @@
 import React from 'react';
-import { 
-  Typography, 
-  Container, 
-  Grid, 
-  Card, 
-  CardContent, 
-  Box, 
-  Chip 
-} from '@mui/material';
+import { Typography, Container, Grid, Card, CardContent } from '@mui/material';
+import ExperienceCard from '../components/ExperienceCard/ExperienceCard';
 
 interface CareerExperience {
   company: string;
@@ -94,47 +87,8 @@ const CareerPage: React.FC = () => {
   return (
     <Container>
       <Typography variant="h3" gutterBottom>Professional Experience</Typography>
-      
       {experiences.map((exp, index) => (
-        <Card key={index} sx={{ mb: 3 }}>
-          <CardContent>
-            <Grid container spacing={2}>
-              <Grid item xs={12}>
-                <Typography variant="h5">{exp.company}</Typography>
-                <Typography variant="subtitle1" color="text.secondary">
-                  {exp.title} | {exp.duration}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {exp.location}
-                </Typography>
-              </Grid>
-              
-              <Grid item xs={12}>
-                <Typography variant="h6" gutterBottom>Responsibilities</Typography>
-                <Box component="ul" sx={{ pl: 2, m: 0 }}>
-                  {exp.responsibilities.map((resp, i) => (
-                    <Typography key={i} component="li" variant="body2">
-                      {resp}
-                    </Typography>
-                  ))}
-                </Box>
-              </Grid>
-              
-              <Grid item xs={12}>
-                <Typography variant="h6" gutterBottom>Skills</Typography>
-                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-                  {exp.skills.map((skill, i) => (
-                    <Chip 
-                      key={i} 
-                      label={skill}  
-                      size="small" 
-                    />
-                  ))}
-                </Box>
-              </Grid>
-            </Grid>
-          </CardContent>
-        </Card>
+        <ExperienceCard key={index} {...exp} />
       ))}
 
       <Typography variant="h3" gutterBottom>Education & Certifications</Typography>
