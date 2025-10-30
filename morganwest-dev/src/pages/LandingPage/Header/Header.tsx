@@ -67,7 +67,7 @@ const Header: React.FC<HeaderProps> = ({ onSearchChange, onTagFilter, availableT
           
           <Box className={styles.spacer} />
           
-          {!isMobile && (
+          {!isMobile ? (
             <>
               <Button 
                 component={Link}
@@ -87,6 +87,10 @@ const Header: React.FC<HeaderProps> = ({ onSearchChange, onTagFilter, availableT
                 About
               </Button>
             </>
+          ) : (
+            <IconButton color="inherit" onClick={handleMenuOpen}>
+              <MenuIcon className={styles.menuIcon} />
+            </IconButton>
           )}
           
           {/* TODO: implement filtering below */}
@@ -131,47 +135,19 @@ const Header: React.FC<HeaderProps> = ({ onSearchChange, onTagFilter, availableT
             </IconButton>
           )} */}
           
-          {isMobile && (
-            <Menu 
-              anchorEl={anchorEl} 
-              open={Boolean(anchorEl)} 
-              onClose={handleMenuClose}
-              anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-              transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-              PaperProps={{
-                className: styles.menu
-              }}
-            >
-              <MenuItem onClick={handleMenuClose} component={Link} to="/career">Career</MenuItem>
-              <MenuItem onClick={handleMenuClose} component={Link} to="/about">About</MenuItem>
-              {/* TODO: Implement Filtering below */}
-              {/* <Box className={styles.mobileSearchContainer}>
-                <TextField
-                  placeholder="Search posts..."
-                  value={searchValue}
-                  onChange={handleSearchChange}
-                  size="small"
-                  fullWidth
-                  className={styles.mobileSearchField}
-                />
-                <Autocomplete
-                  multiple
-                  options={availableTags}
-                  value={selectedTags}
-                  onChange={handleTagChange}
-                  size="small"
-                  fullWidth
-                  className={styles.mobileAutocomplete}
-                  renderInput={(params) => (
-                    <TextField
-                      {...params}
-                      placeholder="Filter by tags"
-                    />
-                  )}
-                />
-              </Box> */}
-            </Menu>
-          )}
+          <Menu 
+            anchorEl={anchorEl} 
+            open={Boolean(anchorEl)} 
+            onClose={handleMenuClose}
+            anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+            transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+            PaperProps={{
+              className: styles.menu
+            }}
+          >
+            <MenuItem onClick={handleMenuClose} component={Link} to="/career">Career</MenuItem>
+            <MenuItem onClick={handleMenuClose} component={Link} to="/about">About</MenuItem>
+          </Menu>
         </Toolbar>
       </AppBar>
     </Box>
