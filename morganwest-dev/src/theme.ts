@@ -4,45 +4,134 @@ const lightTheme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#E91E63', // Pink
-      light: '#F06292', // Lighter pink
-      dark: '#C2185B', // Darker pink
+      main: '#36465d', // Main blue
+      light: '#46556a', // Lighter blue (border accent)
+      dark: '#2c3847', // Darker blue
       contrastText: '#fff', // White text for contrast
     },
     secondary: {
-      main: '#9C27B0', // Purple
-      light: '#D500F9', // Lighter purple
-      dark: '#7B1FA2', // Darker purple
+      main: '#55bc8a', // Green accent
+      light: '#529ecc', // Light blue accent
+      dark: '#a77dc2', // Purple accent
       contrastText: '#fff', // White text for contrast 
     },
     background: {
-      default: '#FCE4EC', // Soft pink background
-      paper: '#F8BBD0', // Softer pink for paper elements
+      default: 'rgba(54, 70, 93, 1)', // Main blue background
+      paper: '#46556a', // Border accent for paper elements
     },
     error: {
-      main: '#D32F2F', // Red for error states
+      main: '#d95e40', // Red accent
+    },
+    warning: {
+      main: '#f2992e', // Orange accent
+    },
+    info: {
+      main: '#529ecc', // Light blue accent
+    },
+    success: {
+      main: '#55bc8a', // Green accent
     },
     text: {
-      primary: '#212121', // Dark text for readability
-      secondary: '#757575', // Lighter text for less emphasis
+      primary: '#ffffff', // White text on dark background
+      secondary: '#737e8e', // Grey text on blue background
     },
   },
   typography: {
-    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontFamily: 'Arial, Helvetica, sans-serif',
     h1: {
       fontWeight: 700,
-      color: '#E91E63', // Pink for headings
+      color: '#ffffff',
+      textTransform: 'uppercase',
+      letterSpacing: '0.05em',
     },
     h2: {
       fontWeight: 600,
-      color: '#9C27B0', // Purple for subheadings
+      color: '#ffffff',
+      textTransform: 'uppercase',
+      letterSpacing: '0.05em',
+    },
+    h3: {
+      fontWeight: 600,
+      color: '#ffffff',
+      textTransform: 'uppercase',
+      letterSpacing: '0.05em',
+    },
+    h4: {
+      fontWeight: 700,
+      color: '#ffffff',
+      textTransform: 'uppercase',
+      letterSpacing: '0.05em',
+    },
+    h5: {
+      fontWeight: 700,
+      color: '#ffffff',
+      textTransform: 'uppercase',
+      letterSpacing: '0.03em',
+    },
+    h6: {
+      fontWeight: 700,
+      color: '#ffffff',
+      textTransform: 'uppercase',
+      letterSpacing: '0.03em',
+    },
+    body1: {
+      fontWeight: 400,
+      color: '#737e8e',
+    },
+    body2: {
+      fontWeight: 400,
+      color: '#737e8e',
     },
   },
   components: {
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: 20, // More rounded buttons
+          borderRadius: 4,
+          textTransform: 'uppercase',
+          letterSpacing: '0.05em',
+          fontWeight: 600,
+        },
+        contained: {
+          backgroundColor: '#9ba2ae',
+          color: '#ffffff',
+          // '&:hover': {
+          //   backgroundColor: '#748089',
+          // },
+        },
+      },
+    },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          borderRadius: 8,
+          backgroundColor: '#46556a',
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#46556a',
+          borderRadius: 8,
+        },
+      },
+    },
+    MuiChip: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#55bc8a',
+          color: '#ffffff',
+          fontWeight: 500,
+          margin: '0.25rem',
+        },
+      },
+    },
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: 'rgba(54, 70, 93, 1)',
+          borderBottom: '1px solid #46556a',
         },
       },
     },
@@ -53,55 +142,136 @@ const darkTheme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#E91E63', // Pink
-      light: '#F06292', // Lighter pink
-      dark: '#C2185B', // Darker pink
+      main: '#36465d', // Main blue
+      light: '#46556a', // Lighter blue (border accent)
+      dark: '#2c3847', // Darker blue
       contrastText: '#fff', // White text for contrast
     },
     secondary: {
-      main: '#9C27B0', // Purple
-      light: '#D500F9', // Lighter purple
-      dark: '#7B1FA2', // Darker purple
+      main: '#55bc8a', // Green accent
+      light: '#529ecc', // Light blue accent
+      dark: '#a77dc2', // Purple accent
       contrastText: '#fff', // White text for contrast 
     },
     background: {
-      default: '#121212', // Dark background
-      paper: '#1F1F1F', // Darker paper elements
+      default: 'rgba(54, 70, 93, 1)', // Main blue background
+      paper: '#46556a', // Border accent for paper elements
     },
     error: {
-      main: '#D32F2F', // Red for error states
+      main: '#d95e40', // Red accent
+    },
+    warning: {
+      main: '#f2992e', // Orange accent
+    },
+    info: {
+      main: '#529ecc', // Light blue accent
+    },
+    success: {
+      main: '#55bc8a', // Green accent
     },
     text: {
-      primary: '#E0E0E0', // Light text for dark mode
-      secondary: '#B0BEC5', // Lighter text for less emphasis
+      primary: '#ffffff', // White text on dark background
+      secondary: '#737e8e', // Grey text on blue background
     },
   },
   typography: {
-    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontFamily: 'Arial, Helvetica, sans-serif',
     h1: {
       fontWeight: 700,
-      color: '#E91E63', // Pink for headings in dark mode
+      color: '#ffffff',
+      textTransform: 'uppercase',
+      letterSpacing: '0.05em',
     },
     h2: {
       fontWeight: 600,
-      color: '#9C27B0', // Purple for subheadings
+      color: '#ffffff',
+      textTransform: 'uppercase',
+      letterSpacing: '0.05em',
+    },
+    h3: {
+      fontWeight: 600,
+      color: '#ffffff',
+      textTransform: 'uppercase',
+      letterSpacing: '0.05em',
+    },
+    h4: {
+      fontWeight: 700,
+      color: '#ffffff',
+      textTransform: 'uppercase',
+      letterSpacing: '0.05em',
+    },
+    h5: {
+      fontWeight: 700,
+      color: '#ffffff',
+      textTransform: 'uppercase',
+      letterSpacing: '0.03em',
+    },
+    h6: {
+      fontWeight: 700,
+      color: '#ffffff',
+      textTransform: 'uppercase',
+      letterSpacing: '0.03em',
+    },
+    body1: {
+      fontWeight: 400,
+      color: '#737e8e',
+    },
+    body2: {
+      fontWeight: 400,
+      color: '#737e8e',
     },
   },
   components: {
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: 20, // More rounded buttons
+          borderRadius: 4,
+          textTransform: 'uppercase',
+          letterSpacing: '0.05em',
+          fontWeight: 600,
+        },
+        contained: {
+          backgroundColor: '#9ba2ae',
+          color: '#ffffff',
+          // '&:hover': {
+          //   backgroundColor: '#748089',
+          // },
         },
       },
     },
     MuiPaper: {
       styleOverrides: {
         root: {
-          borderRadius: 50
-        }
-      }
-    }
+          borderRadius: 8,
+          backgroundColor: '#46556a',
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#46556a',
+          borderRadius: 8,
+        },
+      },
+    },
+    MuiChip: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#55bc8a',
+          color: '#ffffff',
+          fontWeight: 500,
+        },
+      },
+    },
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: 'rgba(54, 70, 93, 1)',
+          borderBottom: '1px solid #46556a',
+        },
+      },
+    },
   },
 });
 
