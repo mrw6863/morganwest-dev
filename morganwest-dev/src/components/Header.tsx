@@ -24,7 +24,7 @@ const Header: React.FC = () => {
         <Toolbar>
           <Link to="/" style={{ display: 'flex', alignItems: 'center' }}>
             <img 
-              src={"/white-icon.png"} 
+              src={"/icon.png"} 
               alt="Home" 
               style={{ height: '40px', width: 'auto' }} 
             />
