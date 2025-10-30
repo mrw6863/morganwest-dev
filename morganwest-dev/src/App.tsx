@@ -6,7 +6,7 @@ import Projects from './pages/Projects';
 import Skills from './pages/Skills';
 import Contact from './pages/Contact';
 import LandingPage from './pages/LandingPage/LandingPage';
-import CareerPage from './pages/CareerPage';
+import CareerPage from './pages/Terminal/CareerPage';
 import { lightTheme, darkTheme } from './theme';
 
 const App: React.FC = () => {

@@ -1,6 +1,5 @@
 import React from 'react';
-import { Typography, Container, Grid, Card, CardContent } from '@mui/material';
-import ExperienceCard from '../components/ExperienceCard/ExperienceCard';
+import styles from './ExperienceContent.module.css';
 
 interface CareerExperience {
   company: string;
@@ -23,7 +22,7 @@ interface Certification {
   date: string;
 }
 
-const CareerPage: React.FC = () => {
+const ExperienceContent: React.FC = () => {
   const experiences: CareerExperience[] = [
     {
       company: "WeTheHobby",
@@ -85,36 +84,56 @@ const CareerPage: React.FC = () => {
   ];
 
   return (
-    <Container>
-      <Typography variant="h3" gutterBottom>Professional Experience</Typography>
-      {experiences.map((exp, index) => (
-        <ExperienceCard key={index} {...exp} />
-      ))}
+    <div>
+      <div className={styles.prompt}>
+        $ cat experience.txt<span className={styles.cursor}>_</span>
+      </div>
 
-      <Typography variant="h3" gutterBottom>Education & Certifications</Typography>
-      <Card sx={{ mb: 3 }}>
-        <CardContent>
-          <Grid container spacing={2}>
-            {education.map((edu, index) => (
-              <Grid item xs={12} key={index}>
-                <Typography variant="h6">{edu.institution}</Typography>
-                <Typography variant="body1">{edu.degree}</Typography>
-                <Typography variant="body2" color="text.secondary">{edu.date}</Typography>
-              </Grid>
-            ))}
+      <div className={styles.section}>
+        <div className={styles.sectionTitle}>// PROFESSIONAL EXPERIENCE</div>
+        {experiences.map((exp, index) => (
+          <div key={index} className={styles.experienceBlock}>
+            <div className={styles.company}>{exp.company}</div>
+            <div className={styles.title}>{exp.title}</div>
+            <div className={styles.meta}>{exp.duration} | {exp.location}</div>
             
-            {certifications.map((cert, index) => (
-              <Grid item xs={12} key={index}>
-                <Typography variant="h6">{cert.name}</Typography>
-                <Typography variant="body1">{cert.organization}</Typography>
-                <Typography variant="body2" color="text.secondary">{cert.date}</Typography>
-              </Grid>
-            ))}
-          </Grid>
-        </CardContent>
-      </Card>
-    </Container>
+            <div className={styles.subheading}>Responsibilities:</div>
+            <ul className={styles.list}>
+              {exp.responsibilities.map((resp, idx) => (
+                <li key={idx} className={styles.listItem}>{resp}</li>
+              ))}
+            </ul>
+            
+            <div className={styles.subheading}>Skills:</div>
+            <div className={styles.skillsGrid}>
+              {exp.skills.map((skill, idx) => (
+                <span key={idx} className={styles.skill}>{skill}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className={styles.section}>
+        <div className={styles.sectionTitle}>// EDUCATION & CERTIFICATIONS</div>
+        {education.map((edu, index) => (
+          <div key={index} className={styles.educationBlock}>
+            <div className={styles.institution}>{edu.institution}</div>
+            <div className={styles.degree}>{edu.degree}</div>
+            <div className={styles.date}>{edu.date}</div>
+          </div>
+        ))}
+        
+        {certifications.map((cert, index) => (
+          <div key={index} className={styles.educationBlock}>
+            <div className={styles.institution}>{cert.name}</div>
+            <div className={styles.degree}>{cert.organization}</div>
+            <div className={styles.date}>{cert.date}</div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
 
-export default CareerPage;
+export default ExperienceContent;
