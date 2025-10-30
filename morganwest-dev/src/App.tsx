@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import Header from './components/Header';
-import About from './components/About';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Contact from './components/Contact';
-import LandingPage from './components/LandingPage';
-import CareerPage from './components/CareerPage';
+import About from './pages/About';
+import Projects from './pages/Projects';
+import Skills from './pages/Skills';
+import Contact from './pages/Contact';
+import LandingPage from './pages/LandingPage';
+import CareerPage from './pages/CareerPage';
 import { lightTheme, darkTheme } from './theme';
 
 const App: React.FC = () => {
