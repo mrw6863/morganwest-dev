@@ -1,0 +1,153 @@
+.headerContainer {
+    margin-bottom: 2rem;
+  }
+  
+  .toolbar {
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .logoLink {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 40px;
+    width: auto;
+  }
+  
+  .button1 {
+    background-color: #9ba2ae;
+    color: #46556a !important;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+  
+  .button2 {
+    background-color: #529ecc !important;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+  
+  .spacer {
+    flex-grow: 1;
+  }
+  
+  .searchContainer {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    min-width: 300px;
+  }
+  
+  .searchField {
+    background-color: #46556a;
+    border-radius: 4px;
+  }
+  
+  .searchField :global(.MuiOutlinedInput-root) {
+    color: #ffffff;
+  }
+  
+  .searchField :global(.MuiOutlinedInput-root fieldset) {
+    border-color: #46556a;
+  }
+  
+  .searchField :global(.MuiOutlinedInput-root:hover fieldset) {
+    border-color: #55bc8a;
+  }
+  
+  .searchField :global(.MuiOutlinedInput-root.Mui-focused fieldset) {
+    border-color: #55bc8a;
+  }
+  
+  .searchField :global(.MuiInputBase-input::placeholder) {
+    color: #737e8e;
+    opacity: 1;
+  }
+  
+  .autocomplete {
+    min-width: 200px;
+    background-color: #46556a;
+    border-radius: 4px;
+  }
+  
+  .autocomplete :global(.MuiOutlinedInput-root) {
+    color: #ffffff;
+  }
+  
+  .autocomplete :global(.MuiOutlinedInput-root fieldset) {
+    border-color: #46556a;
+  }
+  
+  .autocomplete :global(.MuiOutlinedInput-root:hover fieldset) {
+    border-color: #55bc8a;
+  }
+  
+  .autocomplete :global(.MuiOutlinedInput-root.Mui-focused fieldset) {
+    border-color: #55bc8a;
+  }
+  
+  .autocomplete :global(.MuiInputBase-input::placeholder) {
+    color: #737e8e;
+    opacity: 1;
+  }
+  
+  .autocomplete :global(.MuiAutocomplete-tag) {
+    margin: 2px;
+  }
+  
+  .chip {
+    background-color: #55bc8a;
+    color: #ffffff;
+  }
+  
+  .chip :global(.MuiChip-deleteIcon) {
+    color: #ffffff;
+  }
+  
+  .chip :global(.MuiChip-deleteIcon:hover) {
+    color: #e0e0e0;
+  }
+  
+  .menuIcon {
+    color: #fff;
+  }
+  
+  .menu {
+    background-color: #46556a;
+    color: #ffffff;
+  }
+  
+  .mobileSearchContainer {
+    padding: 1rem;
+  }
+  
+  .mobileSearchField {
+    margin-bottom: 1rem;
+    background-color: #36465d;
+    border-radius: 4px;
+  }
+  
+  .mobileSearchField :global(.MuiOutlinedInput-root) {
+    color: #ffffff;
+  }
+  
+  .mobileSearchField :global(.MuiOutlinedInput-root fieldset) {
+    border-color: #46556a;
+  }
+  
+  .mobileAutocomplete {
+    background-color: #36465d;
+    border-radius: 4px;
+  }
+  
+  .mobileAutocomplete :global(.MuiOutlinedInput-root) {
+    color: #ffffff;
+  }

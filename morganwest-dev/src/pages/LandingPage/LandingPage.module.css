@@ -1,0 +1,209 @@
+/* Color Variables */
+:root {
+    --bg-blue: rgba(54, 70, 93, 1);
+    --text-on-blue: #737e8e;
+    --grey-button: #9ba2ae;
+    --text-on-color: white;
+    --border-accent: #46556a;
+    --accent-green: #55bc8a;
+    --accent-red: #d95e40;
+    --accent-orange: #f2992e;
+    --accent-light-blue: #529ecc;
+    --accent-grey: #748089;
+    --accent-purple: #a77dc2;
+  }
+  
+  /* Base Styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Landing Page Container */
+  .landing-page {
+    min-height: 100vh;
+    background-color: var(--bg-blue);
+  }
+  
+  /* Header Styles */
+  .header {
+    background-color: var(--bg-blue);
+    border-bottom: 1px solid var(--border-accent);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo-link {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 40px;
+    width: auto;
+  }
+  
+  .nav-link {
+    color: var(--text-on-blue);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  
+  .nav-link:hover {
+    color: var(--text-on-color);
+  }
+  
+  /* Mobile Menu */
+  .mobile-menu {
+    position: relative;
+  }
+  
+  .menu-button {
+    color: var(--text-on-color);
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .menu-button:hover,
+  .menu-button.active {
+    background-color: var(--border-accent);
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    right: 0;
+    margin-top: 0.5rem;
+    width: 12rem;
+    background-color: var(--border-accent);
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0.25rem 0;
+    z-index: 10;
+  }
+  
+  .dropdown-item {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--text-on-color);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown-item:hover {
+    background-color: var(--accent-green);
+  }
+  
+  /* Main Content */
+  .main-content {
+    max-width: 672px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+  
+  .main-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-on-color);
+  }
+  
+  .main-text {
+    font-size: 1.125rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.75;
+    font-weight: 400;
+    color: var(--text-on-blue);
+  }
+  
+  .cta-button {
+    display: inline-block;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.875rem;
+    background-color: var(--grey-button);
+    color: var(--text-on-color);
+    text-decoration: none;
+  }
+  
+  .cta-button:hover {
+    background-color: var(--accent-grey);
+  }
+  
+  .accent-line {
+    margin-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2px;
+    width: 100px;
+    background-color: var(--border-accent);
+  }
+  
+  /* Footer */
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    border-top: 1px solid var(--border-accent);
+  }
+  
+  .footer-text {
+    font-size: 0.875rem;
+    color: var(--text-on-blue);
+    font-weight: 400;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .main-heading {
+      font-size: 2rem;
+    }
+  
+    .main-text {
+      font-size: 1rem;
+    }
+  
+    .main-content {
+      padding: 3rem 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .main-heading {
+      font-size: 1.5rem;
+    }
+  
+    .cta-button {
+      padding: 0.625rem 1.5rem;
+      font-size: 0.8125rem;
+    }
+  }
