@@ -1,5 +1,5 @@
 import { Card, CardMedia, CardContent, Typography, Box, Chip } from "@mui/material";
-import './LandingPage.module.css';
+import styles from "./PostCard.module.css"
 
 const PostCard = ({ post, onClick }: { post: any; onClick: () => void }) => {
     return (

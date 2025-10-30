@@ -5,9 +5,10 @@ import {
   Grid
 } from '@mui/material';
 import './LandingPage.module.css';
-import PostCard from './PostCard';
-import PostModal from './PostModal';
+import PostCard from './Post/PostCard';
+import PostModal from './Post/PostModal';
 import { mockPosts } from './MockPosts';
+import Header from './Header/Header';
 
 
 const LandingPage: React.FC = () => {
@@ -26,6 +27,8 @@ const LandingPage: React.FC = () => {
 
   return (
     <Box className="landing-page">
+
+      <Header />
       
       <Container maxWidth="lg" className="feed-container">
         

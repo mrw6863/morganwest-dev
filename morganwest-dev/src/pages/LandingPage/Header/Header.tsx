@@ -70,17 +70,21 @@ const Header: React.FC<HeaderProps> = ({ onSearchChange, onTagFilter, availableT
           {!isMobile && (
             <>
               <Button 
+                component={Link}
+                to="/career"
                 variant="contained"
                 className={styles.button1}
               >
-                Button 1
+                Career
               </Button>
               
               <Button 
+                component={Link}
+                to="/about"
                 variant="contained"
                 className={styles.button2}
               >
-                Button 2
+                About
               </Button>
             </>
           )}
@@ -138,8 +142,8 @@ const Header: React.FC<HeaderProps> = ({ onSearchChange, onTagFilter, availableT
                 className: styles.menu
               }}
             >
-              <MenuItem onClick={handleMenuClose}>Button 1</MenuItem>
-              <MenuItem onClick={handleMenuClose}>Button 2</MenuItem>
+              <MenuItem onClick={handleMenuClose} component={Link} to="/career">Career</MenuItem>
+              <MenuItem onClick={handleMenuClose} component={Link} to="/about">About</MenuItem>
               {/* TODO: Implement Filtering below */}
               {/* <Box className={styles.mobileSearchContainer}>
                 <TextField
