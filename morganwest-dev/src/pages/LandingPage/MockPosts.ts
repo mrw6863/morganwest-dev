@@ -1,4 +1,5 @@
 import { experiences } from '../../info/experienceData';
+import { NotionPost } from '../../services/notionService';
 
 export interface Post {
   id: number;
@@ -11,7 +12,7 @@ export interface Post {
 }
 
 // Convert experiences to posts format
-export const mockPosts: Post[] = experiences.map((exp, index) => {
+export const mockPosts: NotionPost[] = experiences.map((exp, index) => {
   // Generate full content from experience data
   const responsibilitiesList = exp.responsibilities
     .map(resp => `• ${resp}`)
@@ -36,18 +37,18 @@ This role allowed me to grow significantly as both a technical leader and projec
 
   // Generate tags from skills (take first few)
   const tags = [
-    'software-engineering',
+    `software-engineering-${index}`, // Make it unique
     ...(exp.endDate === 'Present' ? ['current'] : []),
     ...(exp.skills.slice(0, 2).map((skill: any) => skill.toLowerCase().replace(/\s+/g, '-')))
   ];
 
   return {
-    id: index + 1,
+    id: String(index + 1), // Convert to string
     title: `${exp.title} at ${exp.company}`,
     description: exp.description,
-    image: exp.image,
+    image: exp.image || '', // Ensure image is always a string
     tags: tags,
     date: exp.startDate,
-    fullContent: fullContent
+    content: fullContent // Change from fullContent to content to match NotionPost interface
   };
 });
